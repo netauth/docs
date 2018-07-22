@@ -1,0 +1,15 @@
+# Summary
+
+- [Introduction](./introduction.md)
+- [Getting Started](./setup/index.md)
+  - [Installation](./setup/installation.md)
+  - [Setup](./setup/setup.md)
+- [Command Reference](./commands/index.md)
+  - [Global Flags](./commands/flags.md)
+  - [Authentication](./commands/auth/index.md)
+    - [auth](./commands/auth/auth.md)
+    - [change-secret](./commands/auth/change-secret.md)
+    - [get-token](./commands/auth/get-token.md)
+    - [inspect-token](./commands/auth/inspect-token.md)
+    - [validate-token](./commands/auth/validate-token.md)
+    - [destroy-token](./commands/auth/destroy-token.md)
