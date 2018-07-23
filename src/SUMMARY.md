@@ -25,3 +25,7 @@
     - [modify-group](./groups/modify-group.md)
     - [group-info](./groups/group-info.md)
     - [list-groups](./groups/list-groups.md)
+  - [Membership](./membership/index.md)
+    - [entity-membership](./membership/entity-membership.md)
+    - [group-expansions](./membership/group-expansions.md)
+    - [list-members](./membership/list-members.md)
