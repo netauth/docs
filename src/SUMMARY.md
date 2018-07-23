@@ -29,3 +29,5 @@
     - [entity-membership](./membership/entity-membership.md)
     - [group-expansions](./membership/group-expansions.md)
     - [list-members](./membership/list-members.md)
+  - [Capabilities](./capabilities/index.md)
+    - [modify-capabilities](./capabilities/modify-capabilities.md)
