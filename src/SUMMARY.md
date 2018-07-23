@@ -31,3 +31,5 @@
     - [list-members](./membership/list-members.md)
   - [Capabilities](./capabilities/index.md)
     - [modify-capabilities](./capabilities/modify-capabilities.md)
+  - [System](./system/index.md)
+    - [ping](./system/ping.md)
