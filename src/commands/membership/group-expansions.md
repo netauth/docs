@@ -146,15 +146,19 @@ large tree like this is also quite high.
 ## Help Text
 
 ```
-group-expansions --parent <parent> --child <child> --mode <INCLUDE|EXCLUDE|DROP>
+group-expansions --parent <parent> --child <child> --<include|exclude|drop>
 
 Modify group expansions.  INCLUDE will include the children of the
 named group in the parent, EXCLUDE will exclude the children of the
 named group from the parent, and DROP will remove rules of either
 type.  -child string
         Child Group
-  -mode string
-        Mode, must be one of INCLUDE, EXCLUDE, or DROP (default "INCLUDE")
+  -drop
+        Drop this rule specification
+  -exclude
+        This is an EXCLUDE rule
+  -include
+        This is an INCLUDE rule
   -parent string
         Parent Group
 ```
@@ -182,7 +186,7 @@ ID: demo
 Number: 7
 GECOS: Demonstration Entity
 $ netauth list-members --group parent
-$ netauth group-expansions --mode INCLUDE --parent parent --child child
+$ netauth group-expansions --include --parent parent --child child
 $ netauth list-members --group parent
 ID: demo
 Number: 7

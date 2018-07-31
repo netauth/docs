@@ -1,14 +1,14 @@
-# delete-group
+# destroy-group
 
 Remove an existing group from the server.
 
 ## Help Text
 
 ```
-new-group --name <name>
+destroy-group --group <name>
 Delete the named group.
-  -name string
-        Name for the new group.
+  -group string
+        Name of the group to destroy.
 ```
 
 ## Usage
@@ -19,6 +19,6 @@ must possess the `DESTROY_GROUP` capability.
 ## Example
 
 ```shell
-$ netauth delete-group --name demo-group
+$ netauth delete-group --group demo-group
 Group removed successfully
 ```

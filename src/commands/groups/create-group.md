@@ -1,11 +1,11 @@
-# new-group
+# create-group
 
 Create a new group.
 
 ## Help Text
 
 ```
-new-group --name <name> [--display_name <display name>] [--gid_number <number>] [--managed_by <name>]
+create-group --name <name> [--display_name <display name>] [--gid_number <number>] [--managed_by <name>]
 Allocate a new group with the given name and optional display name.
 If the gid_number is not specified then the next available number will
 be used.  The name and number cannot be changed once set, only the
@@ -42,6 +42,6 @@ creation).
 ## Example
 
 ```shell
-$ netauth new-group --name demo-group --display_name "Demo Group"
+$ netauth create-group --name demo-group --display_name "Demo Group"
 New group created successfully
 ```

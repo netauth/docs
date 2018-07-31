@@ -6,11 +6,11 @@ fields.
 ## Help Text
 
 ```
-entity-info --ID <ID>  [--fields field1,field2...]
+entity-info --entity <ID>  [--fields field1,field2...]
 Print information about an entity.  The listed fields can be used to
 limit the information that is printed.
-  -ID string
-        ID for the new entity
+  -entity string
+        ID to summon info for (default "maldridge")
   -fields string
         Comma seperated list of fields to display
 ```
@@ -26,12 +26,12 @@ and instead must be queried by other commands.
 ## Example
 
 ```
-$ netauth entity-info --ID demo
+$ netauth entity-info --entity demo
 ID: demo
 Number: 7
 GECOS: Demonstration Entity
 
-$ netauth entity-info --ID demo --fields ID,GECOS
+$ netauth entity-info --entity demo --fields ID,GECOS
 ID: demo
 GECOS: Demonstration Entity
 ```

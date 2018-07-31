@@ -1,4 +1,4 @@
-# remove-entity
+# destroy-entity
 
 Remove an existing entity from the server.  Note that entity
 references are not cleaned up, so any downstream system must have
@@ -9,14 +9,14 @@ incremental views may not notice the deletion.
 ## Help Text
 
 ```
-remove-entity --ID <ID>
-Remove the specified entity from the server.  -ID string
+destroy-entity --entity <ID>
+Remove the specified entity from the server.  -entity string
         ID for the entity to be removed
 ```
 
 ## Usage
 
-The remove-entity command removes an entity from the server.  The
+The destroy-entity command removes an entity from the server.  The
 calling entity must posses appropriate capabilities to perform this
 action, either via holding `GLOBAL_ROOT` powers or holding the
 `DESTROY_ENTITY` capability.
@@ -26,6 +26,6 @@ No confirmation is requested and entity removal is not reversable.
 ## Example
 
 ```
-$ netauth remove-entity --ID demo
+$ netauth destroy-entity --entity demo
 Entity removed successfully
 ```

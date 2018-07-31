@@ -7,13 +7,13 @@ certificates for easy retrieval by other entities.
 ## Help Text
 
 ```
-modify-keys --ID <ID> --mode <ADD|LIST|DEL> --type <type> --key <key>
+modify-keys --entity <ID> --mode <ADD|LIST|DEL> --type <type> --key <key>
 
 Modify the stored keys for an entity.  Key type must be specified as a
 string of well known type.  This will be an uppercase version of the
 key type like 'SSH' or 'GPG'.
-  -ID string
-        Entity to act on
+  -entity string
+        Entity to act on (default "maldridge")
   -key string
         Key contents
   -mode string
@@ -40,12 +40,12 @@ key, usually the key comment.
 
 ```shell
 $ netauth modify-keys \
-    --ID demo \
+    --entity demo \
     --mode ADD \
     --key "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHqv36a+nr6xf2gZhdR2zvkxJnxKku892Z4LjkQjA7t demo@demoKey"
 
-$ netauth modify-keys --ID demo --mode LIST
+$ netauth modify-keys --entity demo --mode LIST
 Type: SSH; Key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHqv36a+nr6xf2gZhdR2zvkxJnxKku892Z4LjkQjA7t demo@demoKey
 
-$ netauth modify-keys --ID demo --mode DEL roaming
+$ netauth modify-keys --entity demo --mode DEL roaming
 ```

@@ -1,11 +1,11 @@
-# new-entity
+# create-entity
 
 Create a new entity.
 
 ## Help Text
 
 ```
-new-entity --ID <ID> --number <number> --secret <secret>
+create-entity --ID <ID> --number <number> --secret <secret>
   Create a new entity with the specified ID, number, and secret.
   number may be ommitted to select the next available number.
   Secret may be ommitted to leave unset.  -ID string
@@ -36,7 +36,7 @@ using the change-secret command to prompt for the new secret.
 ## Example
 
 ```shell
-$ netauth new-entity --ID demo
+$ netauth create-entity --ID demo
 New entity created successfully
 $ netauth entity-info --ID demo
 ID: demo

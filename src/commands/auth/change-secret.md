@@ -5,17 +5,17 @@ Change the authentication secret for an entity.
 ## Help Text
 
 ```
-change-secret --ID <ID>  --secret <secret>
+change-secret --entity <ID>  --secret <secret>
 Change the secret for the listed entity.  If no entity is provided the
-entity specified by the top level flag will be used instead.  -ID string
-    	ID to change secret (default "maldridge")
+entity specified by the top level flag will be used instead.  -entity string
+        ID to change secret (default "maldridge")
   -secret string
-    	New secret (omit for prompt)
+        New secret (omit for prompt)
 ```
 
 ## Flags
 
-  * `--ID`: Change the secret of this entity specifically.
+  * `--entity`: Change the secret of this entity specifically.
   * `--secret`: Specify the secret on the command line.  Generally not
     recommended.
 

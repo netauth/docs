@@ -5,13 +5,13 @@ Summon all known information about a group.
 ## Help Text
 
 ```
-group-info --name <name> [--fields field1,field2,field3...]
+group-info --group <name> [--fields field1,field2,field3...]
 
 Return the fields of a group.  This will provide information on a
 single group, as opposed to attempting to list all groups.
   -fields string
         Comma seperated list of fields to display
-  -name string
+  -group string
         Name of the group to query
 ```
 
@@ -24,12 +24,12 @@ may be optionally filtered by providing a comma seperated list to the
 ## Example
 
 ```shell
-$ netauth group-info --name demo-group
+$ netauth group-info --group demo-group
 Name: demo-group
 Display Name: Temporary Demo Group
 Number: 9
 
-$ netauth group-info --name demo-group --fields name,displayName
+$ netauth group-info --group demo-group --fields name,displayName
 Name: demo-group
 Display Name: Temporary Demo Group
 ```

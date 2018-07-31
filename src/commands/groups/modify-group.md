@@ -5,14 +5,14 @@ Modify the mutable fields on an existing group.
 ## Help Text
 
 ```
-modify-group --name <name> [fields-to-be-modified]
+modify-group --group <name> [fields-to-be-modified]
 Modify a group by updating the named fields to the provided values.
   -display_name string
         Group displayName (default "NO_CHANGE")
+  -group string
+        Name of the group to modify
   -managed_by string
         Group that manages this group (default "NO_CHANGE")
-  -name string
-        Name of the group to modify
 ```
 
 ## Usage
@@ -30,6 +30,6 @@ entities in the named group.
 ## Example
 
 ```shell
-$ netauth modify-group --name demo-group --display_name "Temporary Demo Group"
+$ netauth modify-group --group demo-group --display_name "Temporary Demo Group"
 Group modified successfully
 ```
