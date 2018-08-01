@@ -4,6 +4,7 @@
 - [Getting Started](./setup/index.md)
   - [Installation](./setup/installation.md)
   - [Setup](./setup/setup.md)
+    - [Database](./setup/db.md)
 - [Command Reference](./commands/index.md)
   - [Global Flags](./commands/flags.md)
   - [Authentication](./commands/auth/index.md)
