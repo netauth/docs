@@ -32,9 +32,8 @@ Modify an entity by updating the named fields to the provided values.
 ## Usage
 
 The modify-meta command alters the flat fields associated with an
-entity's meta-data.  The calling entity must either posses the
-appropriate capability, `MODIFY_ENTITY_META`, or the change must be
-requested by the entity itself.
+entity's meta-data.  The calling entity must posses the appropriate
+capability, `MODIFY_ENTITY_META`.
 
 Only fields specified will be changed, so there is no need to
 re-specify a field who's value will remain the same.
