@@ -33,5 +33,7 @@
     - [list-members](./commands/membership/list-members.md)
   - [Capabilities](./commands/capabilities/index.md)
     - [modify-capabilities](./commands/capabilities/modify-capabilities.md)
+  - [Untyped Metadata](./commands/untyped-meta/index.md)
+    - [untyped-meta](./commands/untyped-meta/untyped-meta.md)
   - [System](./commands/system/index.md)
     - [ping](./commands/system/ping.md)
