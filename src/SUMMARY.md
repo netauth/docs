@@ -21,6 +21,7 @@
     - [modify-meta](./commands/entities/modify-meta.md)
     - [entity-info](./commands/entities/entity-info.md)
     - [modify-keys](./commands/entities/modify-keys.md)
+    - [lock-entity](./commands/entities/lock-entity.md)
   - [Groups](./commands/groups/index.md)
     - [create-group](./commands/groups/create-group.md)
     - [destroy-group](./commands/groups/destroy-group.md)
