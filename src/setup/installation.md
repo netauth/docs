@@ -45,7 +45,7 @@ Once you have obtained the source, you may build the server and
 client.
 
 ```shell
-$ go get github.com/NetAuth/Netauth/cmd/...
+$ go get github.com/NetAuth/NetAuth/cmd/...
 ```
 
 Your compiled binaries will be in `$GOPATH/bin/`.  As with all Go
