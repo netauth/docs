@@ -2,8 +2,57 @@
 
 Once you have installed the server, you will need to set it up.
 
-The server binary (`netuathd`) has no configuration files, it is
-instead configured at launch by passing flags to it.
+NetAuth has a single configuration file which configures both clients
+and servers.  The configuration file is handled by Viper and can be
+parsed as TOML, JSON, or YAML.  TOML is the canonical format and the
+format that will be shown in the documentation.
+
+These are the defaults for the config file:
+
+```
+[core]
+  home = ""
+
+[crypto]
+  backend = "bcrypt"
+
+  [crypto.bcrypt]
+    cost = 15
+
+[db]
+  backend = "ProtoDB"
+
+[server]
+  bind = "localhost"
+  bootstrap = ""
+  port = 8080
+
+[tls]
+  certificate = "keys/tls.crt"
+  key = "keys/tls.key"
+  pwn_me = false
+
+[token]
+  backend = "jwt-rsa"
+  lifetime = "10h0m0s"
+  renewals = 5
+```
+
+A suitable configuration file can be as little as:
+
+```
+[core]
+  home = "/var/lib/netauth"
+[server]
+  bind = "0.0.0.0"
+```
+
+Configuration files are resolved on a first-found basis from the
+following locations:
+
+  * /etc/netauth/config.toml
+  * $HOME/.netauth/config.toml
+  * $(pwd)/config.toml
 
 It is recommended to use a job control system to run the NetAuth
 server, this can be be handily done with `runit` which is available
@@ -15,22 +64,5 @@ below:
 
 cd /var/lib/netauthd || exit 1
 
-exec chpst -u _netauthd:_netauthd netauthd \
-     --bind "" \
-     --port 8443 \
-     --key_file security/netauth_tls_certificate.key \
-     --cert_file security/netauth_tls_certificate.pem \
-     --db ProtoDB \
-     --protodb_root ./data \
-     --crypto bcrypt \
-     --bcrypt_cost 10 \
-     --token_lifetime 20m \
-     --token_renewals 0 \
-     --token_impl jwt-rsa \
-     --jwt_rsa_privatekey security/netauth_token.key \
-     --jwt_rsa_publickey security/netauth_token.pem \
-     2>&1
+exec chpst -u _netauthd:_netauthd netauthd 2>&1
 ```
-
-The above configuration should be self explanatory, but each of the
-options is listed in the help output for the server.
