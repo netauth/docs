@@ -1,23 +1,24 @@
-## netauth entity info
+## netauth entity unlock
 
-Fetch information on an existing entity
+Unlock the entity with the specified ID
 
 ### Synopsis
 
 
-The info command can return information on any entity known to the
-server.  The output may be filtered with the --fields option which
-takes a comma seperated list of field names to display.  
+Unlock an entity with the specified ID.  A locked entity cannot
+authenticate successfully, even when presenting the correct secret.
+
+The caller must posess the UNLOCK_ENTITY capability or be a
+GLOBAL_ROOT operator for this command to succeed.
 
 ```
-netauth entity info <entity> [flags]
+netauth entity unlock <ID> [flags]
 ```
 
 ### Options
 
 ```
-      --fields string   Fields to be displayed
-  -h, --help            help for info
+  -h, --help   help for unlock
 ```
 
 ### Options inherited from parent commands

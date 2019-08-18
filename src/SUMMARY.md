@@ -19,6 +19,8 @@
     - [Info](./commands/netauth_entity_info.md)
     - [Search](./commands/netauth_entity_search.md)
     - [Update](./commands/netauth_entity_update.md)
+    - [Lock](./commands/netauth_entity_lock.md)
+    - [Unlock](./commands/netauth_entity_unlock.md)
     - [Key](./commands/netauth_entity_key.md)
     - [K/V](./commands/netauth_entity_kv.md)
     - [Membership](./commands/netauth_entity_membership.md)
