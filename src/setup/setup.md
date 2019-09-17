@@ -9,7 +9,7 @@ format that will be shown in the documentation.
 
 These are the defaults for the config file:
 
-```
+```toml
 [core]
   home = ""
 
@@ -22,20 +22,32 @@ These are the defaults for the config file:
 [db]
   backend = "ProtoDB"
 
+[log]
+  level = "INFO"
+
+[pdb]
+  watch-interval = "1s"
+  watcher = false
+
+[plugin]
+  path = "plugins"
+
 [server]
   bind = "localhost"
   bootstrap = ""
-  port = 8080
+  port = 1729
 
 [tls]
-  certificate = "keys/tls.crt"
+  certificate = "keys/tls.pem"
   key = "keys/tls.key"
-  pwn_me = false
 
 [token]
   backend = "jwt-rsa"
-  lifetime = "10h0m0s"
-  renewals = 5
+  lifetime = "10m0s"
+
+  [token.jwt]
+    bits = 2048
+    generate = false
 ```
 
 A suitable configuration file can be as little as:
@@ -50,9 +62,9 @@ A suitable configuration file can be as little as:
 Configuration files are resolved on a first-found basis from the
 following locations:
 
-  * /etc/netauth/config.toml
-  * $HOME/.netauth/config.toml
   * $(pwd)/config.toml
+  * $HOME/.netauth/config.toml
+  * /etc/netauth/config.toml
 
 It is recommended to use a job control system to run the NetAuth
 server, this can be be handily done with `runit` which is available

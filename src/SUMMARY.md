@@ -6,6 +6,7 @@
   - [Setup](./setup/setup.md)
     - [Database](./setup/db.md)
     - [Cryptography](./setup/crypto.md)
+    - [Plugins](./setup/plugins.md)
 - [Command Reference](./commands/netauth.md)
   - [Authentication](./commands/netauth_auth.md)
     - [Change Secret](./commands/netauth_auth_change-secret.md)
