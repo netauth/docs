@@ -20,8 +20,8 @@ If your distribution does not provide packages, or if you do not wish
 to use them, you can compile from source:
 
 ```shell
-$ git clone -b <version> git://github.com/NetAuth/NetAuth
-$ cd NetAuth
+$ git clone -b <version> git://github.com/netauth/netauth
+$ cd netauth
 $ go build -o netauthd cmd/netauthd/main.go
 $ go build -o netauth cmd/netauth/main.go
 ```
