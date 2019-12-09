@@ -34,7 +34,6 @@ These are the defaults for the config file:
 
 [server]
   bind = "localhost"
-  bootstrap = ""
   port = 1729
 
 [tls]
