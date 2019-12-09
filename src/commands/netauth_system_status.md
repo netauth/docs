@@ -1,30 +1,30 @@
-## netauth system ping
+## netauth system status
 
-Ping the server and print the reply
+Request a status report from the server
 
 ### Synopsis
 
 
-The ping command provides an easy way to interogate a server and find
-if it is behaving as expected.  The ping command requests a server to
-pong back if with its health status.
+The status command provides an easy way to interogate a server and
+find if it is behaving as expected.  The status command requests a
+server to return information on each subsystem and to report failure
+information if any subsystem is reporting an unhealthy state.
 
 
 ```
-netauth system ping [flags]
+netauth system status [flags]
 ```
 
 ### Examples
 
 ```
-$ netauth system ping
-NetAuth server on theGibson is ready to serve!
+$ netauth system status
 ```
 
 ### Options
 
 ```
-  -h, --help   help for ping
+  -h, --help   help for status
 ```
 
 ### Options inherited from parent commands
