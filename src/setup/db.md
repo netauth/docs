@@ -1,18 +1,37 @@
 # Database
 
-All entities and groups are stored in a database for persistence.  You
-must choose what kind of database you wish to use with NetAuth.  A
-discussion of available databases can be found below.
+All entities and groups are stored in a key/value store.  These
+key/value stores are indexed at server startup to be searchable, and
+are considered an opaque storage solution.  A brief discussion of the
+available storage engines follows:
 
-## ProtoDB
 
-ProtoDB is the default storage engine for NetAuth.  This option will
-simply use directories and files on disk to store the protocol buffers
-that represent NetAuth's internal state.  This option should be
-reasonably performant for many users and should scale well across
-small to medium installations.
+## Filesystem
 
-ProtoDB is safe to synchronize across multiple servers for high
-availability and the disk state is consistent as much as possible, but
-a crash during a write may corrupt the entity or group that was being
-written, so it is recommended to backup the data directory regularly.
+The filesystem backend is cross platform and will work on all
+operating systems that Go can target.  It writes out keys as
+individual regular files to the filesystem.  This backend is great for
+getting started, but can suffer from performance problems with very
+large numbers of entities or groups.
+
+You can select this backend with the following configuration:
+
+```toml
+[db]
+  backend = "filesystem"
+```
+
+## Bitcask
+
+Bitcask is a highly performant memory mapped storage option that is
+only supported on select platforms.  In general if running on a Linux
+platform, this is the backend to use.  Bitcask stores the data in a
+memory mapped datastore that is extremely fast up to tens of thousands
+of entities and groups.
+
+You can select this backend with the following configuration:
+
+```toml
+[db]
+  backend = "bitcask"
+```
