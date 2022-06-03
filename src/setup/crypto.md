@@ -25,3 +25,17 @@ Wikipedia:
 
 bcrypt is the default engine and unless you have a good reason why you
 should implement another cryptography engine, stick with the defaults.
+It is selected in configuration with the following values:
+
+```toml
+
+[crypto]
+  backend = "bcrypt"
+
+  [crypto.bcrypt]
+    cost = 15
+```
+
+The cost value may be adjusted to change the hashing difficulty.
+Higher cost roughly translates to better resistance to attack for the
+hashes.
