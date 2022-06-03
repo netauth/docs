@@ -22,6 +22,10 @@ to use them, you can compile from source:
 ```shell
 $ git clone -b <version> git://github.com/netauth/netauth
 $ cd netauth
-$ go build -o netauthd cmd/netauthd/main.go
-$ go build -o netauth cmd/netauth/main.go
+$ go build -o netauthd github.com/netauth/netauth/cmd/netauthd
+$ go build -o netauth github.com/netauth/netauth/cmd/netauth
+$ go build -o nsutil github.com/netauth/netauth/cmd/nsutil
 ```
+
+You can now copy the binaries to wherever your system stores binaries
+that are locally managed.  Typically this will be `/usr/local/bin`.
