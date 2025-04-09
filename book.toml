@@ -1,5 +1,4 @@
 [book]
 authors = ["Michael Aldridge"]
-multilingual = false
 src = "src"
 title = "NetAuth Administrative Manual"
