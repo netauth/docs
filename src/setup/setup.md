@@ -13,6 +13,10 @@ These are the defaults for the config file:
 [core]
   home = ""
 
+  # These settings control where clients will attempt to find the NetAuth Server.
+  server = "localhost"
+  port = 1729
+
 [crypto]
   backend = "bcrypt"
 
